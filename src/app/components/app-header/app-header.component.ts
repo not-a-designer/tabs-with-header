@@ -1,4 +1,7 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, 
+         EventEmitter, 
+         Input, 
+         Output } from '@angular/core';
 
 
 interface Action {
@@ -12,7 +15,7 @@ interface Action {
   templateUrl: './app-header.component.html',
   styleUrls: ['./app-header.component.scss']
 })
-export class AppHeaderComponent implements OnInit {
+export class AppHeaderComponent {
 
   @Input('title') title: string;
 
@@ -22,9 +25,6 @@ export class AppHeaderComponent implements OnInit {
   isAuthenticated: boolean = false;
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
   onSettingsClicked() {
     this.headerAction.emit({ name: 'settings' })

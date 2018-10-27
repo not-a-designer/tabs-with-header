@@ -1,9 +1,5 @@
-import { Component, ViewChild }  from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
-
-import { filter, map, tap }           from 'rxjs/operators';
-import { Observable } from 'rxjs';
-import { IonRouterOutlet } from '@ionic/angular';
+import { Component }  from '@angular/core';
+import { Router }     from '@angular/router';
 
 
 interface TabPage {
@@ -20,8 +16,6 @@ interface TabPage {
   styleUrls: ['tabs.page.scss']
 })
 export class TabsPage {
-
-  @ViewChild('homeOutlet') homeOutlet: IonRouterOutlet;
 
   tabsList: Array<TabPage> = [
     {

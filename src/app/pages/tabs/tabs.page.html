@@ -1,6 +1,7 @@
 <ion-header>
   <app-header [title]="outletTitle" (headerAction)="handleHeaderActions($event)"></app-header>
 </ion-header>
+
 <ion-content>
   <ion-tabs (ionNavDidChange)="getOutlet()">
     <ion-tab 
