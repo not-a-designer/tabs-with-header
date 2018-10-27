@@ -1,0 +1,7 @@
+{
+  "name": "testheadertabs",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
