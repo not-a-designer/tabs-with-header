@@ -1,0 +1,26 @@
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-menu-toggle>
+      <ion-button icon-only>
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+    </ion-menu-toggle>
+    <ion-icon name="search" *ngIf="title === 'Contact'"></ion-icon>
+  </ion-buttons>
+
+  <ion-title *ngIf="title != 'Contact'">{{ title | titlecase }}</ion-title>
+  <ion-input *ngIf="title === 'Contact'" type="text" placeholder="Search contacts..."></ion-input>
+
+  <ion-buttons slot="primary">
+
+  </ion-buttons>
+
+  <ion-buttons slot="end">
+    <ion-button icon-only *ngIf="isAuthenticated" (click)="onSettingsClicked()">
+      <ion-icon name="settings"></ion-icon>
+    </ion-button>
+    <ion-button icon-only (click)="isAuthenticated = !isAuthenticated">
+      <ion-icon [name]="isAuthenticated ? 'log-out' : 'log-in'"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>

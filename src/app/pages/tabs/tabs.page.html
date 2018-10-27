@@ -1,0 +1,30 @@
+<ion-header>
+  <app-header [title]="outletTitle" (headerAction)="handleHeaderActions($event)"></app-header>
+</ion-header>
+<ion-content>
+  <ion-tabs (ionNavDidChange)="getOutlet()">
+    <ion-tab 
+      label="Home" 
+      icon="home" 
+      title="Home"
+      href="/tabs/(home:home)">
+      <ion-router-outlet name="home"></ion-router-outlet>
+    </ion-tab>
+
+    <ion-tab 
+      label="About" 
+      icon="information-circle" 
+      title="About"
+      href="/tabs/(about:about)">
+      <ion-router-outlet name="about"></ion-router-outlet>
+    </ion-tab>
+
+    <ion-tab 
+      label="Contact" 
+      icon="contacts" 
+      title="Contact"
+      href="/tabs/(contact:contact)">
+      <ion-router-outlet name="contact"></ion-router-outlet>
+    </ion-tab>
+  </ion-tabs>
+</ion-content>
